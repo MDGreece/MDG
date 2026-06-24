@@ -2,19 +2,22 @@
   "en": [
     {
       "title": "Eligibility",
-      "body": "Teams must be connected to the Greek World of Warcraft community. Each team has 5 core players and may register substitutes."
+      "body": "Each team is allowed to have 5+3 players. All players must speak Greek"
     },
     {
       "title": "Format",
-      "body": "Each week contains one or more Mythic+ time trial challenges. Teams submit their best valid run before the weekly deadline."
+      "body": "Each week, every team must complete 3 timed Mythic+ Dungeons, of predetermined difficulty. Difficulty will change with each passing week.
+      The keys must be streamed and after the completion, each team must post on the Discord Server, the Raider.io ID of the key and the link of the VOD.
+      After the completion of the Time Trial phase. There will be live playoffs."
     },
     {
       "title": "Scoring",
-      "body": "Teams receive points based on weekly ranking. Fastest valid completion receives the highest score."
+      "body": "For the Time Trial phase, the official score of Raider.IO would be used.
+      For the Playoffs, the format will be a 2 Hour Push and the best score of the best three keys of each team will decide the winner."
     },
     {
       "title": "Verification",
-      "body": "Runs may require screenshot, Raider.IO link, Warcraft Logs link, or stream/VOD proof depending on admin decision."
+      "body": "For the Time Trials, a verified run would one which has a VOD from a stream and the the Official Raider.IO ID of the 3 keys."
     }
   ],
   "el": [
