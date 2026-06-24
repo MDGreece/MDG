@@ -1,0 +1,15 @@
+{
+  "siteTitle": "MDG: Mythic Dungeon Greece",
+  "seasonName": "Season 1",
+  "languageDefault": "en",
+  "discordUrl": "#",
+  "registrationUrl": "#",
+  "heroTitle": {
+    "en": "Greek Community Mythic+ Time Trials",
+    "el": "Ελληνικά Mythic+ Time Trials"
+  },
+  "heroSubtitle": {
+    "en": "Weekly dungeon challenges, team rankings, archived results, and season leaderboards.",
+    "el": "Εβδομαδιαίες προκλήσεις dungeon, βαθμολογίες ομάδων, αρχείο αποτελεσμάτων και season leaderboard."
+  }
+}

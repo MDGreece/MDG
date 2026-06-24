@@ -1,0 +1,20 @@
+[
+  {
+    "id": "team-alpha",
+    "name": "Team Alpha",
+    "captain": "PlayerOne",
+    "realm": "Draenor",
+    "faction": "Horde",
+    "logo": "",
+    "members": ["Tankname", "Healname", "DPSone", "DPStwo", "DPSthree"]
+  },
+  {
+    "id": "team-beta",
+    "name": "Team Beta",
+    "captain": "PlayerTwo",
+    "realm": "Silvermoon",
+    "faction": "Alliance",
+    "logo": "",
+    "members": ["Tanktwo", "Healtwo", "DPSfour", "DPSfive", "DPSsix"]
+  }
+]

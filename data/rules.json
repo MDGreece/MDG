@@ -1,0 +1,14 @@
+{
+  "en": [
+    {"title": "Eligibility", "body": "Teams must be connected to the Greek World of Warcraft community. Each team has 5 core players and may register substitutes."},
+    {"title": "Format", "body": "Each week contains one or more Mythic+ time trial challenges. Teams submit their best valid run before the weekly deadline."},
+    {"title": "Scoring", "body": "Teams receive points based on weekly ranking. Fastest valid completion receives the highest score."},
+    {"title": "Verification", "body": "Runs may require screenshot, Raider.IO link, Warcraft Logs link, or stream/VOD proof depending on admin decision."}
+  ],
+  "el": [
+    {"title": "Δικαίωμα συμμετοχής", "body": "Οι ομάδες πρέπει να έχουν σύνδεση με την ελληνική World of Warcraft κοινότητα. Κάθε ομάδα έχει 5 βασικούς παίκτες και μπορεί να δηλώσει substitutes."},
+    {"title": "Format", "body": "Κάθε εβδομάδα περιλαμβάνει ένα ή περισσότερα Mythic+ time trial challenges. Οι ομάδες δηλώνουν το καλύτερο έγκυρο run πριν το weekly deadline."},
+    {"title": "Βαθμολογία", "body": "Οι ομάδες παίρνουν πόντους ανάλογα με την εβδομαδιαία κατάταξη. Το πιο γρήγορο έγκυρο completion παίρνει την υψηλότερη βαθμολογία."},
+    {"title": "Verification", "body": "Τα runs μπορεί να χρειάζονται screenshot, Raider.IO link, Warcraft Logs link ή stream/VOD proof, ανάλογα με την απόφαση των admins."}
+  ]
+}

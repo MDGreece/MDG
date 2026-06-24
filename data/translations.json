@@ -1,0 +1,10 @@
+{
+  "en": {
+    "nav_home": "Home", "nav_leaderboard": "Leaderboard", "nav_weekly": "Weekly Results", "nav_teams": "Teams", "nav_rules": "Rules", "nav_admin": "Admin",
+    "current_leaderboard": "Current Leaderboard", "weekly_results": "Weekly Results", "teams": "Teams", "rules": "Rules"
+  },
+  "el": {
+    "nav_home": "Αρχική", "nav_leaderboard": "Βαθμολογία", "nav_weekly": "Εβδομαδιαία Αποτελέσματα", "nav_teams": "Ομάδες", "nav_rules": "Κανόνες", "nav_admin": "Admin",
+    "current_leaderboard": "Τρέχουσα Βαθμολογία", "weekly_results": "Εβδομαδιαία Αποτελέσματα", "teams": "Ομάδες", "rules": "Κανόνες"
+  }
+}
