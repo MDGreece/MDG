@@ -1,0 +1,32 @@
+{
+  "season": "Season 1",
+  "teams": [
+    {"name":"Team Olympus","description":"Example team placeholder.","players":["Tankname - Protection Paladin","Healname - Restoration Shaman","Dpsone - Havoc Demon Hunter","Dpstwo - Mage","Dpsthree - Rogue"]},
+    {"name":"Team Aegean","description":"Example team placeholder.","players":["Tank","Healer","DPS 1","DPS 2","DPS 3"]},
+    {"name":"Team Spartan","description":"Example team placeholder.","players":["Tank","Healer","DPS 1","DPS 2","DPS 3"]}
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Opening Trial",
+      "dungeon": "Example Dungeon",
+      "deadline": "2026-08-07 23:59 EET",
+      "results": [
+        {"team":"Team Olympus","key":"+10","time":"21:32","deaths":3,"points":100,"proof":""},
+        {"team":"Team Aegean","key":"+10","time":"22:04","deaths":5,"points":90,"proof":""},
+        {"team":"Team Spartan","key":"+10","time":"23:18","deaths":7,"points":80,"proof":""}
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Second Trial",
+      "dungeon": "Example Dungeon 2",
+      "deadline": "2026-08-14 23:59 EET",
+      "results": [
+        {"team":"Team Aegean","key":"+10","time":"20:58","deaths":2,"points":100,"proof":""},
+        {"team":"Team Olympus","key":"+10","time":"21:10","deaths":4,"points":90,"proof":""},
+        {"team":"Team Spartan","key":"+10","time":"22:45","deaths":8,"points":80,"proof":""}
+      ]
+    }
+  ]
+}
