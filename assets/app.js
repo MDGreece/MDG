@@ -2,7 +2,24 @@ const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.queryS
 const lang=localStorage.getItem('mdg_lang')||'en';
 async function getJSON(path){const res=await fetch(path,{cache:'no-store'});return res.json()}
 function setNav(){document.querySelectorAll('[data-lang]').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.onclick=()=>{localStorage.setItem('mdg_lang',b.dataset.lang);location.reload()}})}
-function nav(){return `<div class="nav"><div class="container nav-inner"><a class="brand" href="index.html"><span>MDG</span>: Mythic Dungeon Greece</a><div class="links"><a href="index.html" data-t="nav_home">Home</a><a href="leaderboard.html" data-t="nav_leaderboard">Leaderboard</a><a href="weekly.html" data-t="nav_weekly">Weekly Results</a><a href="teams.html" data-t="nav_teams">Teams</a><a href="rules.html" data-t="nav_rules">Rules</a><a href="admin/index.html" data-t="nav_admin">Admin</a></div><div class="lang"><button data-lang="en">EN</button><button data-lang="el">EL</button></div></div></div>`}
+function nav(){
+  return `<div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span>MDG</span>: Mythic Dungeon Greece</a>
+      <div class="links">
+        <a href="index.html" data-t="nav_home">Home</a>
+        <a href="leaderboard.html" data-t="nav_leaderboard">Leaderboard</a>
+        <a href="weekly.html" data-t="nav_weekly">Weekly Results</a>
+        <a href="teams.html" data-t="nav_teams">Teams</a>
+        <a href="rules.html" data-t="nav_rules">Rules</a>
+      </div>
+      <div class="lang">
+        <button data-lang="en">EN</button>
+        <button data-lang="el">EL</button>
+      </div>
+    </div>
+  </div>`
+}
 async function boot(){document.body.insertAdjacentHTML('afterbegin',nav());setNav();try{const tr=await getJSON('data/translations.json');$$('[data-t]').forEach(el=>el.textContent=tr[lang]?.[el.dataset.t]||el.textContent)}catch(e){}}
 function timeToSec(t){let [m,s]=String(t).split(':').map(Number);return (m||0)*60+(s||0)}
 function leaderboard(teams,results){const map={};teams.forEach(t=>map[t.id]={team:t,points:0,runs:0,best:null});results.forEach(w=>w.runs.forEach(r=>{if(!map[r.teamId])return;map[r.teamId].points+=Number(r.points||0);map[r.teamId].runs++;const sec=timeToSec(r.time);if(map[r.teamId].best==null||sec<map[r.teamId].best)map[r.teamId].best=sec}));return Object.values(map).sort((a,b)=>b.points-a.points||((a.best??99999)-(b.best??99999)))}
