@@ -1,1 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MDG.gr | Mythic+ Time Trials</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span>MDG</span><small>.gr</small></a>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="rules.html">Rules</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="weekly.html">Weekly Results</a>
+        <a href="teams.html">Teams</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <p class="eyebrow">Greek World of Warcraft Community</p>
+      <h1>Mythic+ Time Trials</h1>
+      <p class="hero-text">A two-month competitive M+ tournament with weekly dungeon challenges, archived results, and an automatic seasonal leaderboard.</p>
+      <div class="cta-row">
+        <a class="button primary" href="leaderboard.html">View Leaderboard</a>
+        <a class="button" href="rules.html">Tournament Rules</a>
+      </div>
+    </section>
+  </header>
 
+  <main class="container">
+    <section class="grid three">
+      <article class="card">
+        <h2>Format</h2>
+        <p>Teams compete in weekly Mythic+ time trials. Each week has a defined dungeon pool, key level, deadline, and scoring rules.</p>
+      </article>
+      <article class="card">
+        <h2>Weekly Archive</h2>
+        <p>Every week is saved permanently, so players can review results, rankings, and fastest runs throughout the season.</p>
+      </article>
+      <article class="card">
+        <h2>Automation Ready</h2>
+        <p>Update one data file or connect a Google Sheet. The website generates tables automatically from your submitted results.</p>
+      </article>
+    </section>
+
+    <section class="section-header">
+      <p class="eyebrow">Current Season</p>
+      <h2>Latest standings preview</h2>
+    </section>
+    <div class="table-card">
+      <table id="homeLeaderboard"></table>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> MDG.gr — Mythic+ Dungeon Greece</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
