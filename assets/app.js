@@ -1,5 +1,5 @@
 const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const lang=localStorage.getItem('mdg_lang')||'en';
+const lang=localStorage.getItem('mdg_lang')||'el';
 async function getJSON(path){const res=await fetch(path,{cache:'no-store'});return res.json()}
 function setNav(){document.querySelectorAll('[data-lang]').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.onclick=()=>{localStorage.setItem('mdg_lang',b.dataset.lang);location.reload()}})}
 function nav(){
