@@ -32,6 +32,7 @@ overflow-x:auto;
 }
 
 .links a{
+flex:0 0 auto;
 padding:6px 8px;
 font-size:13px;
 border:1px solid transparent;
