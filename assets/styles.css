@@ -241,3 +241,50 @@ footer{border-top:1px solid var(--border);margin-top:40px;padding:28px 0;color:v
     grid-template-columns:280px 280px 280px 260px;
   }
 }
+/* Warcraft-style leaderboard */
+.table-wrap{
+  border:1px solid #d8b35d;
+  border-radius:22px;
+  box-shadow:
+    0 0 22px rgba(216,179,93,.18),
+    0 18px 55px rgba(0,0,0,.45);
+  background:
+    radial-gradient(circle at top,rgba(216,179,93,.10),transparent 45%),
+    linear-gradient(180deg,rgba(12,20,34,.96),rgba(5,8,18,.98));
+}
+
+table{
+  background:transparent;
+}
+
+th{
+  color:#d8b35d;
+  background:rgba(216,179,93,.08);
+  text-shadow:0 0 10px rgba(216,179,93,.35);
+}
+
+td{
+  color:#ece8df;
+}
+
+tr:nth-child(even){
+  background:rgba(255,255,255,.025);
+}
+
+tr:hover{
+  background:rgba(216,179,93,.08);
+}
+
+.rank{
+  color:#f5b942;
+  text-shadow:0 0 12px rgba(245,185,66,.45);
+}
+
+#leaderboardBody tr:first-child{
+  background:
+    linear-gradient(90deg,rgba(245,185,66,.20),rgba(49,95,141,.08));
+}
+
+#leaderboardBody tr:first-child .rank{
+  font-size:20px;
+}
