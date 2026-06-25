@@ -93,6 +93,15 @@
 <script>
   renderHome();
 
+setTimeout(() => {
+  const registerButton = document.querySelector('.light-blue-btn');
+  if(registerButton){
+    registerButton.href = 'https://discord.com/channels/1519743554388496565/1519744166605623616';
+    registerButton.target = '_blank';
+    registerButton.rel = 'noopener noreferrer';
+  }
+}, 300);
+
   function updateWeekCountdown(){
     const countdown = document.getElementById('weekCountdown');
     if(!countdown) return;
