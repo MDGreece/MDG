@@ -288,3 +288,17 @@ tr:hover{
 #leaderboardBody tr:first-child .rank{
   font-size:20px;
 }
+.light-blue-btn{
+    background:linear-gradient(135deg,#5ec8ff,#2d7fe8)!important;
+    color:white!important;
+    border:1px solid #7fd8ff!important;
+    font-weight:700;
+    box-shadow:0 0 15px rgba(94,200,255,.35);
+    transition:.2s;
+}
+
+.light-blue-btn:hover{
+    background:linear-gradient(135deg,#78d6ff,#4594f5)!important;
+    box-shadow:0 0 22px rgba(94,200,255,.6);
+    transform:translateY(-2px);
+}
