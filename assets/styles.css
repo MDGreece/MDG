@@ -133,3 +133,111 @@ footer{border-top:1px solid var(--border);margin-top:40px;padding:28px 0;color:v
   .nav-inner{align-items:flex-start;gap:12px;flex-direction:column}
   .admin .row{grid-template-columns:1fr}
 }
+.tournament-bracket{
+  display:grid;
+  grid-template-columns:280px 280px 280px 260px;
+  gap:70px;
+  align-items:center;
+  margin-top:40px;
+  overflow-x:auto;
+  padding:40px;
+  border:1px solid var(--border);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at top,rgba(85,166,255,.18),transparent 45%),
+    linear-gradient(180deg,rgba(9,16,28,.95),rgba(4,7,12,.98));
+}
+
+.bracket-round{
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+  position:relative;
+}
+
+.bracket-round h2{
+  color:var(--gold);
+  text-align:center;
+  text-shadow:0 0 14px rgba(245,185,66,.45);
+}
+
+.bracket-match{
+  position:relative;
+  border:1px solid #315f7d;
+  border-radius:16px;
+  overflow:visible;
+  background:linear-gradient(180deg,rgba(20,34,53,.95),rgba(7,11,20,.98));
+  box-shadow:0 0 18px rgba(85,166,255,.12),0 14px 35px rgba(0,0,0,.35);
+}
+
+.team{
+  padding:13px 16px;
+  border-bottom:1px solid var(--border);
+  font-weight:800;
+}
+
+.team:last-child{
+  border-bottom:0;
+}
+
+.bracket-match::after{
+  content:"";
+  position:absolute;
+  right:-35px;
+  top:50%;
+  width:35px;
+  height:2px;
+  background:var(--gold);
+  box-shadow:0 0 10px rgba(245,185,66,.6);
+}
+
+.semi-round .bracket-match::before,
+.final-round .bracket-match::before,
+.champion-round .champion-box::before{
+  content:"";
+  position:absolute;
+  left:-35px;
+  top:50%;
+  width:35px;
+  height:2px;
+  background:var(--gold);
+  box-shadow:0 0 10px rgba(245,185,66,.6);
+}
+
+.semi-round{
+  gap:122px;
+}
+
+.final-round{
+  gap:0;
+}
+
+.final-match{
+  border-color:var(--gold);
+}
+
+.champion-box{
+  position:relative;
+  text-align:center;
+  color:var(--gold);
+  font-size:22px;
+  font-weight:900;
+  padding:24px;
+  border:1px solid var(--gold);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at top,rgba(245,185,66,.22),transparent 55%),
+    linear-gradient(180deg,rgba(45,30,8,.96),rgba(8,11,18,.98));
+  text-shadow:0 0 16px rgba(245,185,66,.55);
+}
+
+.champion-round .champion-box::after,
+.final-round .bracket-match::after{
+  display:none;
+}
+
+@media(max-width:900px){
+  .tournament-bracket{
+    grid-template-columns:280px 280px 280px 260px;
+  }
+}
