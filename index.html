@@ -1,1 +1,141 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MDG: Mythic Dungeon Greece</title><link rel="stylesheet" href="assets/styles.css"></head><body><main class="container hero"><span class="pill" id="season">Season 2</span><h1 id="heroTitle">MDG: Mythic Dungeon Greece</h1><p id="heroSubtitle">Mythic+ Tournament</p><div class="links"><a class="btn" href="leaderboard.html">View Leaderboard</a></div></main><section class="container grid"><article class="card"><h3>Weekly Time Trials</h3><p class="muted">Add weekly dungeon runs and archive each week automatically in the results page.</p></article><article class="card"><h3>Team Profiles</h3><p class="muted">Manage team names, captains, realms, factions, and player rosters.</p></article><article class="card"><h3>Bilingual Content</h3><p class="muted">Switch between English and Greek content for tournament information and rules.</p></article></section><footer><div class="container">MDG: Mythic Dungeon Greece</div></footer><script src="assets/app.js"></script><script>renderHome()</script></body></html>
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MDG: Mythic Dungeon Greece</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+
+<main class="home-hero">
+  <div class="container hero-content">
+    <span class="season-label" id="season">Season 2</span>
+
+    <h1 id="heroTitle">MDG: Mythic Dungeon Greece</h1>
+    <h2 id="heroSubtitle">Mythic+ Tournament</h2>
+
+    <p class="hero-text">
+      Η ελληνική κοινότητα Mythic+ Time Trials.<br>
+      Ανταγωνιστείτε. Βελτιωθείτε. Κυριαρχήστε.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn gold-btn" href="leaderboard.html">🏆 Δείτε το Leaderboard</a>
+      <a class="btn" href="teams.html">👥 Οι Ομάδες</a>
+    </div>
+  </div>
+</main>
+
+<section class="container dashboard-grid">
+
+  <article class="card dashboard-card">
+    <h3>🏆 Live Leaderboard</h3>
+    <p class="muted">Δείτε την τρέχουσα κατάταξη των ομάδων για το Season 2.</p>
+    <a class="card-link" href="leaderboard.html">View full leaderboard →</a>
+  </article>
+
+  <article class="card dashboard-card current-week-card">
+    <h3>📅 Current Week</h3>
+
+    <div class="week-number">
+      WEEK <span id="currentWeekNumber">1</span>
+    </div>
+
+    <div class="weekly-key">
+      WEEKLY KEY LEVEL: +12
+    </div>
+
+    <p class="muted">Week ends in:</p>
+
+    <div class="countdown" id="weekCountdown">
+      Loading...
+    </div>
+  </article>
+
+  <article class="card dashboard-card">
+    <h3>👥 Top Teams</h3>
+    <p class="muted">Δείτε όλες τις ομάδες, captains, realms και rosters.</p>
+    <a class="card-link" href="teams.html">View teams →</a>
+  </article>
+
+  <article class="card dashboard-card">
+    <h3>📜 Rules</h3>
+    <p class="muted">Κανόνες συμμετοχής, scoring system και submission requirements.</p>
+    <a class="card-link" href="rules.html">Read rules →</a>
+  </article>
+
+  <article class="card dashboard-card">
+    <h3>🏅 Hall of Fame</h3>
+    <p class="muted">Season winners, fastest runs και legendary teams.</p>
+    <a class="card-link" href="#">Coming soon →</a>
+  </article>
+
+  <article class="card dashboard-card">
+    <h3>📰 News</h3>
+    <p class="muted">Ανακοινώσεις, updates και νέα για το MDG tournament.</p>
+    <a class="card-link" href="#">Coming soon →</a>
+  </article>
+
+</section>
+
+<footer>
+  <div class="container">© 2026 MDG: Mythic Dungeon Greece</div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+  renderHome();
+
+  function updateWeekCountdown(){
+    const countdown = document.getElementById('weekCountdown');
+    if(!countdown) return;
+
+    const now = new Date();
+    const end = new Date(now);
+
+    const day = now.getDay(); 
+    let daysUntilWednesday = (3 - day + 7) % 7;
+
+    const beforeWednesdayReset =
+      day === 3 &&
+      (
+        now.getHours() < 3 ||
+        (now.getHours() === 2 && now.getMinutes() <= 59)
+      );
+
+    if(daysUntilWednesday === 0 && !beforeWednesdayReset){
+      daysUntilWednesday = 7;
+    }
+
+    end.setDate(now.getDate() + daysUntilWednesday);
+    end.setHours(2,59,59,999);
+
+    const diff = end - now;
+
+    if(diff <= 0){
+      countdown.textContent = 'Resetting soon';
+      return;
+    }
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    countdown.innerHTML = `
+      <span>${days}d</span>
+      <span>${hours}h</span>
+      <span>${minutes}m</span>
+      <span>${seconds}s</span>
+    `;
+  }
+
+  updateWeekCountdown();
+  setInterval(updateWeekCountdown, 1000);
+</script>
+
+</body>
+</html>
