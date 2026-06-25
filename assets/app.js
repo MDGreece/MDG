@@ -14,6 +14,7 @@ return `
         <div class="links">
             <a href="index.html">🏠 Home</a>
             <a href="leaderboard.html">🏆 Leaderboard</a>
+            <a href="brackets.html">🏟️ Brackets</a>
             <a href="weekly.html">📅 Weekly Results</a>
             <a href="teams.html">👥 Teams</a>
             <a href="rules.html">📜 Rules</a>
