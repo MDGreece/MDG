@@ -309,3 +309,77 @@ tr:hover{
   display:block;
   margin:-20px auto 12px auto !important;
 }
+.week-layout{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:30px;
+  align-items:start;
+  margin-top:30px;
+}
+
+.week-tabs{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  position:sticky;
+  top:90px;
+}
+
+.week-tab{
+  width:100%;
+  text-align:left;
+  padding:14px 18px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  cursor:pointer;
+  transition:.2s;
+  font-weight:800;
+}
+
+.week-tab:hover{
+  border-color:var(--gold);
+  transform:translateX(5px);
+}
+
+.week-tab.active{
+  background:linear-gradient(135deg,#f5b942,#b87912);
+  color:#070b14;
+  border-color:#f5b942;
+}
+
+.week-tab.playoff{
+  border-color:rgba(245,185,66,.45);
+}
+
+.playoff-title{
+  margin:18px 0 4px;
+  color:var(--gold);
+  font-size:15px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.week-content{
+  display:none;
+}
+
+.week-content.active-week{
+  display:block;
+}
+
+.week-results .card{
+  min-height:300px;
+}
+
+@media(max-width:900px){
+  .week-layout{
+    grid-template-columns:1fr;
+  }
+
+  .week-tabs{
+    position:static;
+  }
+}
