@@ -54,9 +54,9 @@ border-radius:14px;
 background:rgba(255,255,255,.04);
 }
 
-.home-hero{min-height:560px;display:flex;align-items:center;text-align:center;background:linear-gradient(rgba(5,8,18,.35),rgba(5,8,18,.96)),radial-gradient(circle at center,#24416d,#070b14 70%);border-bottom:1px solid var(--border)}
+.home-hero{min-height:500px;display:flex;align-items:center;text-align:center;background:linear-gradient(rgba(5,8,18,.35),rgba(5,8,18,.96)),radial-gradient(circle at center,#24416d,#070b14 70%);border-bottom:1px solid var(--border)}
 
-.hero-content{padding:90px 0 70px}
+.hero-content{padding:35px 0 60px}
 
 .season-label{display:block;color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:8px;font-size:18px;margin-bottom:22px}
 
