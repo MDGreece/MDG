@@ -351,3 +351,15 @@ tr:hover{
     grid-template-columns:1fr;
   }
 }
+.team-title{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:10px;
+}
+
+.team-logo{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
