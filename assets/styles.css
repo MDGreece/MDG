@@ -355,14 +355,16 @@ tr:hover{
     display:flex;
     align-items:center;
     gap:15px;
-    margin-bottom:10px;
 }
 
 .team-logo{
-    width:24px !important;
-    height:24px !important;
+    width:40px !important;
+    height:40px !important;
     max-width:24px !important;
     max-height:24px !important;
     object-fit:contain;
     flex-shrink:0;
+}
+.team-title h2{
+    margin:0;
 }
