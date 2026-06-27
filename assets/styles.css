@@ -360,8 +360,8 @@ tr:hover{
 .team-logo{
     width:40px !important;
     height:40px !important;
-    max-width:24px !important;
-    max-height:24px !important;
+    max-width:40px !important;
+    max-height:40px !important;
     object-fit:contain;
     flex-shrink:0;
 }
