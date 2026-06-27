@@ -358,10 +358,10 @@ tr:hover{
 }
 
 .team-logo{
-    width:40px !important;
-    height:40px !important;
-    max-width:40px !important;
-    max-height:40px !important;
+    width:50px !important;
+    height:50px !important;
+    max-width:50px !important;
+    max-height:50px !important;
     object-fit:contain;
     flex-shrink:0;
 }
