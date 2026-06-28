@@ -1,126 +1,25 @@
-<!doctype html>
-<html lang="el">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Weekly Results | MDG</title>
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-
-<body>
-
-<main class="container section">
-  <h1>📅 Weekly Results</h1>
-  <p class="muted">Επίλεξε εβδομάδα ή playoff stage για να δεις τα αποτελέσματα.</p>
-
-  <div class="week-layout">
-
-    <aside class="week-tabs">
-      <button class="week-tab active" onclick="showWeek('week1', this)">Week 1</button>
-      <button class="week-tab" onclick="showWeek('week2', this)">Week 2</button>
-      <button class="week-tab" onclick="showWeek('week3', this)">Week 3</button>
-      <button class="week-tab" onclick="showWeek('week4', this)">Week 4</button>
-      <button class="week-tab" onclick="showWeek('week5', this)">Week 5</button>
-      <button class="week-tab" onclick="showWeek('week6', this)">Week 6</button>
-
-      <div class="playoff-title">🏆 PLAYOFFS</div>
-
-      <button class="week-tab playoff" onclick="showWeek('quarterfinals', this)">Quarter Finals</button>
-      <button class="week-tab playoff" onclick="showWeek('semifinals', this)">Semi Finals</button>
-      <button class="week-tab playoff" onclick="showWeek('final', this)">Final</button>
-    </aside>
-
-    <section class="week-results">
-
-      <div id="week1" class="week-content active-week">
-        <article class="card">
-          <h2>Week 1</h2>
-          <p class="muted">Results for Week 1 will be added here.</p>
-        </article>
-      </div>
-
-      <div id="week2" class="week-content">
-        <article class="card">
-          <h2>Week 2</h2>
-          <p class="muted">Results for Week 2 will be added here.</p>
-        </article>
-      </div>
-
-      <div id="week3" class="week-content">
-        <article class="card">
-          <h2>Week 3</h2>
-          <p class="muted">Results for Week 3 will be added here.</p>
-        </article>
-      </div>
-
-      <div id="week4" class="week-content">
-        <article class="card">
-          <h2>Week 4</h2>
-          <p class="muted">Results for Week 4 will be added here.</p>
-        </article>
-      </div>
-
-      <div id="week5" class="week-content">
-        <article class="card">
-          <h2>Week 5</h2>
-          <p class="muted">Results for Week 5 will be added here.</p>
-        </article>
-      </div>
-
-      <div id="week6" class="week-content">
-        <article class="card">
-          <h2>Week 6</h2>
-          <p class="muted">Results for Week 6 will be added here.</p>
-        </article>
-      </div>
-
-      <div id="quarterfinals" class="week-content">
-        <article class="card">
-          <h2>Quarter Finals</h2>
-          <p class="muted">Quarter Finals results will be added here.</p>
-        </article>
-      </div>
-
-      <div id="semifinals" class="week-content">
-        <article class="card">
-          <h2>Semi Finals</h2>
-          <p class="muted">Semi Finals results will be added here.</p>
-        </article>
-      </div>
-
-      <div id="final" class="week-content">
-        <article class="card">
-          <h2>Final</h2>
-          <p class="muted">Final results will be added here.</p>
-        </article>
-      </div>
-
-    </section>
-
-  </div>
-</main>
-
-<footer>
-  <div class="container">© 2026 MDG: Mythic Dungeon Greece</div>
-</footer>
-
-<script src="assets/app.js"></script>
-<script>
-boot();
-
-function showWeek(weekId, button){
-  document.querySelectorAll('.week-content').forEach(section => {
-    section.classList.remove('active-week');
-  });
-
-  document.querySelectorAll('.week-tab').forEach(tab => {
-    tab.classList.remove('active');
-  });
-
-  document.getElementById(weekId).classList.add('active-week');
-  button.classList.add('active');
-}
-</script>
-
-</body>
-</html>
+[
+  {
+    "week": 1,
+    "teams": [
+      {
+        "team": "Οι μπαμπάδες",
+        "logo": "assets/images/2.webp",
+        "runs": [
+          { "dungeon": "Dungeon 1", "time": "00:00", "score": 0 },
+          { "dungeon": "Dungeon 2", "time": "00:00", "score": 0 },
+          { "dungeon": "Dungeon 3", "time": "00:00", "score": 0 }
+        ]
+      },
+      {
+        "team": "Τα μηχανάκια",
+        "logo": "assets/images/mixanakia.png",
+        "runs": [
+          { "dungeon": "Dungeon 1", "time": "00:00", "score": 0 },
+          { "dungeon": "Dungeon 2", "time": "00:00", "score": 0 },
+          { "dungeon": "Dungeon 3", "time": "00:00", "score": 0 }
+        ]
+      }
+    ]
+  }
+]
