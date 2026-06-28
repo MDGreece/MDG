@@ -1,12 +1,12 @@
 [
   {
     "id": "team-alpha",
-    "name": "Team Alpha",
-    "captain": "PlayerOne",
-    "realm": "Draenor",
-    "faction": "Horde",
+    "name": "Οι μπαμπάδες",
+    "captain": "Alentors",
+    "Tank": "Alentors",
+    "Healer": "Slash, Draekhorr",
+    "DPS": "Xgodmighty, Maralyn, Capsizer",
     "logo": "",
-    "members": ["Tankname", "Healname", "DPSone", "DPStwo", "DPSthree"]
   },
   {
     "id": "team-beta",
