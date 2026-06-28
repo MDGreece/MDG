@@ -369,3 +369,17 @@ tr:hover{
     flex-shrink:0;
 }
 }
+.leaderboard-team{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.leaderboard-logo{
+  width:36px !important;
+  height:36px !important;
+  max-width:36px !important;
+  max-height:36px !important;
+  object-fit:contain;
+  flex-shrink:0;
+}
