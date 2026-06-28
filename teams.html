@@ -1,1 +1,380 @@
+
+
+Stopped thinking
+Generated image: Mythic Dungeon Greece tournament homepage
+
+
+Edit
+
+
+Stopped thinking
+Generated image: Mythic Dungeon Greece tournament dashboard
+
+
+Edit
+
+
+Generated image: Mythic Dungeon Greece season 2 UI
+
+
+Edit
+
+
+Generated image: Mythic Dungeon Greece season 2 UI
+Generated image: Mythic Dungeon Greece season 2 UI
+Generated image: Mythic Dungeon Greece season 2 UI
+
+Generated image: Mythic+ tournament homepage design
+Generated image: Mythic+ tournament homepage design
+Generated image: Mythic+ tournament homepage design
+
+Generated image: Website review of MDG: Mythic Dungeon Greece
+
+
+Edit
+
+
+If changing .team-logo doesn't change the size, then something else is controlling the image size.
+
+Let's check these in order:
+
+1. Show me the HTML
+Paste the part that contains:
+
+<div class="team-title">
+and the <img> tag. For example:
+
+<div class="team-title">
+    <img src="assets/images/2.webp" class="team-logo">
+    <h3>Team Name</h3>
+</div>
+2. Check for inline width/height
+If your image looks like this:
+
+<img src="assets/images/2.webp"
+     class="team-logo"
+     width="150">
+or
+
+<img src="assets/images/2.webp"
+     class="team-logo"
+     style="width:150px">
+those attributes override your CSS. Remove them.
+
+3. Force the size
+Try this CSS:
+
+.team-logo{
+    width:24px !important;
+    height:24px !important;
+    max-width:24px !important;
+    max-height:24px !important;
+    object-fit:contain;
+    flex-shrink:0;
+}
+4. Refresh the browser
+After committing the CSS, press:
+
+Ctrl + F5 (Windows)
+
+Cmd + Shift + R (Mac)
+
+to force the browser to load the updated stylesheet.
+
+I'm fairly sure the issue is in the HTML rather than the CSS. If you paste the <div class="team-title"> ... </div> section, I can point to the exact line that needs changing.
+
+
+how can i put it next to the name?
+
+The easiest way is to wrap the logo and the team name in the same container and use Flexbox.
+
+For example:
+
+<div class="team-title">
+    <img src="assets/images/2.webp"
+         class="team-logo"
+         alt="Team Logo">
+
+    <h3>Team Olympus</h3>
+</div>
+Then add this to your CSS:
+
+.team-title{
+    display:flex;
+    align-items:center;
+    gap:10px;   /* Space between logo and name */
+}
+
+.team-logo{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+.team-title h3{
+    margin:0;
+}
+This will display:
+
+[LOGO]  Team Olympus
+with the logo vertically aligned with the text.
+
+If the logo is appearing above the name instead of beside it
+It usually means one of these is happening:
+
+The <img> is not inside the .team-title div.
+
+There is another CSS rule overriding .team-title.
+
+The HTML is structured differently.
+
+If you paste the Hall of Fame HTML around the team name (about 10–15 lines, including the <img> and <h3>), I can tell you the exact code to change.
+
+
+I want to leave a bit more space between the logo and the name
+
+That's controlled by the gap property in .team-title.
+
+If you currently have:
+
+.team-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+Increase the gap value.
+
+For example:
+
+.team-title{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+Or even:
+
+.team-title{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+Guide
+gap: 10px; → Small space
+
+gap: 20px; → Medium space ✅ (recommended)
+
+gap: 30px; → Large space
+
+gap: 40px; → Very large space
+
+For your Hall of Fame page, I'd recommend 20px. It gives the logo enough breathing room while keeping the team name visually connected to it.
+
+
+its still not working
+
+If gap isn't changing anything, then the logo and the team name are probably not inside the same flex container.
+
+I need to see the HTML, not just the CSS.
+
+Please paste the part of your halloffame.html that looks something like this (about 10–15 lines around the logo and the team name):
+
+<img ...>
+
+<h3>...</h3>
+or
+
+<div class="team-title">
+    ...
+</div>
+Without that HTML, I'd just be guessing.
+
+Quick test
+If your code looks like this:
+
+<img src="assets/images/2.webp" class="team-logo">
+<h3>Team Name</h3>
+then gap will never work because there is no flex container.
+
+It must be wrapped like this:
+
+<div class="team-title">
+    <img src="assets/images/2.webp" class="team-logo">
+    <h3>Team Name</h3>
+</div>
+Once you paste that snippet from halloffame.html, I can tell you exactly which line to change.
+
+
+Thought for a couple of seconds
+Yes. Replace your teams.html content with cards like this.
+
+Example team card
+<article class="card team-card">
+
+  <div class="team-title">
+    <h2>Οι μπαμπάδες</h2>
+    <img src="assets/images/2.webp" class="team-logo" alt="Team Logo">
+  </div>
+
+  <p><strong>👑 Captain:</strong> Alentors</p>
+  <p><strong>🛡️ Tank:</strong> Slash</p>
+  <p><strong>✨ Healer:</strong> Maralyn</p>
+  <p><strong>⚔️ DPS:</strong> Mightykhal</p>
+  <p><strong>⚔️ DPS:</strong> Capsizer</p>
+  <p><strong>⚔️ DPS:</strong> Draekhorr</p>
+
+</article>
+For the full Teams page
+Use this structure:
+
+<main class="container section">
+  <h1>👥 Teams</h1>
+  <p class="muted">Οι ομάδες του MDG: Mythic Dungeon Greece.</p>
+
+  <section class="dashboard-grid">
+
+    <article class="card team-card">
+      <div class="team-title">
+        <h2>Οι μπαμπάδες</h2>
+        <img src="assets/images/2.webp" class="team-logo" alt="Team Logo">
+      </div>
+
+      <p><strong>👑 Captain:</strong> Alentors</p>
+      <p><strong>🛡️ Tank:</strong> Slash</p>
+      <p><strong>✨ Healer:</strong> Maralyn</p>
+      <p><strong>⚔️ DPS:</strong> Mightykhal</p>
+      <p><strong>⚔️ DPS:</strong> Capsizer</p>
+      <p><strong>⚔️ DPS:</strong> Draekhorr</p>
+    </article>
+
+  </section>
+</main>
+Add this to assets/styles.css
+.team-card p{
+  margin:10px 0;
+  color:var(--text);
+}
+
+.team-card strong{
+  color:var(--gold);
+}
+
+.team-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.team-title h2{
+  margin:0;
+}
+
+.team-logo{
+  width:42px !important;
+  height:42px !important;
+  object-fit:contain;
+}
+Then duplicate the <article class="card team-card">...</article> block for each team.
+
+
+for the healer, I want a green cross and for the tank a silver shield
+
+It depends on which version of your Teams page you're using.
+
+If you're using teams.html with hardcoded team cards
+Then you edit teams.html directly.
+
+Example:
+
+<p><strong class="captain-role">👑 Captain:</strong> Alentors</p>
+<p><strong class="tank-role">🛡️ Tank:</strong> Slash</p>
+<p><strong class="healer-role">✚ Healer:</strong> Maralyn</p>
+<p><strong class="dps-role">⚔️ DPS:</strong> Mightykhal</p>
+<p><strong class="dps-role">⚔️ DPS:</strong> Capsizer</p>
+<p><strong class="dps-role">⚔️ DPS:</strong> Draekhorr</p>
+If you're still using teams.json
+Then don't edit the HTML. Your app.js is generating the page from the JSON, so you should edit:
+
+data/teams.json
+
+and modify renderTeams() in app.js to display Captain, Tank, Healer, and DPS separately.
+
+I think you're using teams.html
+Based on the changes you've been making recently (Hall of Fame, Week pages, etc.), I suspect you've moved away from the JSON-generated team list and are building custom pages.
+
+Can you paste your current teams.html? I can then tell you exactly where to add the role icons and whether teams.json is still being used.
+
+
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Teams | MDG</title><link rel="stylesheet" href="assets/styles.css"></head><body><main class="container section"><h1 data-t="teams">Teams</h1><section id="teamsGrid" class="grid"></section></main><footer><div class="container">MDG: Mythic Dungeon Greece</div></footer><script src="assets/app.js"></script><script>renderTeams()</script></body></html>
+
+Your teams.html is using teams.json, because this line loads teams automatically:
+
+<section id="teamsGrid" class="grid"></section>
+<script>renderTeams()</script>
+So edit:
+
+data/teams.json
+and also update renderTeams() in:
+
+assets/app.js
+Right now renderTeams() probably shows only members. We need to change it so it displays roles.
+
+Paste your current data/teams.json, and I’ll rewrite the exact JSON + renderTeams() code for Captain, Tank, Healer, DPS, and logo.
+
+
+<main class="container section">
+  <h1>👥 Teams</h1>
+  <p class="muted">Οι ομάδες του MDG: Mythic Dungeon Greece.</p>
+
+  <section class="dashboard-grid">
+
+    <article class="card team-card">
+      <div class="team-title">
+        <h2>Οι μπαμπάδες</h2>
+        <img src="assets/images/2.webp" class="team-logo" alt="Team Logo">
+      </div>
+
+      <p><strong>👑 Captain:</strong> Alentors</p>
+      <p><strong>🛡️ Tank:</strong> Slash</p>
+      <p><strong>✨ Healer:</strong> Maralyn</p>
+      <p><strong>⚔️ DPS:</strong> Mightykhal</p>
+      <p><strong>⚔️ DPS:</strong> Capsizer</p>
+      <p><strong>⚔️ DPS:</strong> Draekhorr</p>
+    </article>
+
+  </section>
+</main>
+
+Use this version in teams.html:
+
+<main class="container section">
+  <h1>👥 Teams</h1>
+  <p class="muted">Οι ομάδες του MDG: Mythic Dungeon Greece.</p>
+
+  <section class="dashboard-grid">
+
+    <article class="card team-card">
+      <div class="team-title">
+        <h2>Οι μπαμπάδες</h2>
+        <img src="assets/images/2.webp" class="team-logo" alt="Team Logo">
+      </div>
+
+      <p><strong class="captain-role">👑 Captain:</strong> Alentors</p>
+      <p><strong class="tank-role">🛡️ Tank:</strong> Slash</p>
+      <p><strong class="healer-role">✚ Healer:</strong> Maralyn</p>
+      <p><strong class="dps-role">⚔️ DPS:</strong> Mightykhal</p>
+      <p><strong class="dps-role">⚔️ DPS:</strong> Capsizer</p>
+      <p><strong class="dps-role">⚔️ DPS:</strong> Draekhorr</p>
+    </article>
+
+  </section>
+</main>
+Then add this to the bottom of assets/styles.css:
+
+.captain-role{color:#f5b942}
+.tank-role{color:#c0c0c0}
+.healer-role{color:#22c55e}
+.dps-role{color:#ef4444}
+The healer will be a green cross, and the tank label will be silver.
+
+
