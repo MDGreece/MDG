@@ -1,20 +1,22 @@
-[
-  {
-    "id": "team-alpha",
-    "name": "Οι μπαμπάδες",
-    "captain": "Alentors",
-    "Tank": "Alentors",
-    "Healer": "Slash, Draekhorr",
-    "DPS": "Xgodmighty, Maralyn, Capsizer",
-    "logo": "",
-  },
-  {
-    "id": "team-beta",
-    "name": "Team Beta",
-    "captain": "PlayerTwo",
-    "realm": "Silvermoon",
-    "faction": "Alliance",
-    "logo": "",
-    "members": ["Tanktwo", "Healtwo", "DPSfour", "DPSfive", "DPSsix"]
-  }
-]
+<main class="container section">
+  <h1>👥 Teams</h1>
+  <p class="muted">Οι ομάδες του MDG: Mythic Dungeon Greece.</p>
+
+  <section class="dashboard-grid">
+
+    <article class="card team-card">
+      <div class="team-title">
+        <h2>Οι μπαμπάδες</h2>
+        <img src="assets/images/2.webp" class="team-logo" alt="Team Logo">
+      </div>
+
+      <p><strong>👑 Captain:</strong> Alentors</p>
+      <p><strong>🛡️ Tank:</strong> Slash</p>
+      <p><strong>✨ Healer:</strong> Maralyn</p>
+      <p><strong>⚔️ DPS:</strong> Mightykhal</p>
+      <p><strong>⚔️ DPS:</strong> Capsizer</p>
+      <p><strong>⚔️ DPS:</strong> Draekhorr</p>
+    </article>
+
+  </section>
+</main>
