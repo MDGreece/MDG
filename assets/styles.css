@@ -354,7 +354,7 @@ tr:hover{
 .team-title{
     display:flex;
     align-items:center;
-    gap:50px;
+    gap:35px;
 }
 
 .team-logo{
@@ -367,7 +367,6 @@ tr:hover{
 }
 .team-title h2{
     margin:0;
-   white-space:nowrap; 
-    flex:1;            
+   white-space:nowrap;            
 }
 }
