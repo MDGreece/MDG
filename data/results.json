@@ -6,9 +6,9 @@
         "team": "Οι μπαμπάδες",
         "logo": "assets/images/2.webp",
         "runs": [
-          { "dungeon": "Dungeon 1", "time": "18:20", "score": 100 },
-          { "dungeon": "Dungeon 2", "time": "19:12", "score": 98 },
-          { "dungeon": "Dungeon 3", "time": "20:01", "score": 96 }
+          { "dungeon": "Windrunner Spire +15", "time": "18:20", "score": 421.4 },
+          { "dungeon": "Seat of Triumvirate +17", "time": "19:12", "score": 443.5 },
+          { "dungeon": "Pit of Saron +18", "time": "20:01", "score": 455.6 }
         ]
       },
       {
