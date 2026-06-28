@@ -354,19 +354,18 @@ tr:hover{
 .team-title{
     display:flex;
     align-items:center;
-    gap:35px;
+    gap:15px;
+}
+
+.team-title h2{
+    margin:0;
+    white-space:nowrap;
 }
 
 .team-logo{
-    width:50px !important;
-    height:50px !important;
-    max-width:50px !important;
-    max-height:50px !important;
+    width:60px;
+    height:60px;
     object-fit:contain;
     flex-shrink:0;
-}
-.team-title h2{
-    margin:0;
-   white-space:nowrap;            
 }
 }
