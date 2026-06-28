@@ -1,22 +1,66 @@
-<main class="container section">
-  <h1>👥 Teams</h1>
-  <p class="muted">Οι ομάδες του MDG: Mythic Dungeon Greece.</p>
-
-  <section class="dashboard-grid">
-
-    <article class="card team-card">
-      <div class="team-title">
-        <h2>Οι μπαμπάδες</h2>
-        <img src="assets/images/2.webp" class="team-logo" alt="Team Logo">
-      </div>
-
-      <p><strong>👑 Captain:</strong> Alentors</p>
-      <p><strong>🛡️ Tank:</strong> Slash</p>
-      <p><strong>✨ Healer:</strong> Maralyn</p>
-      <p><strong>⚔️ DPS:</strong> Mightykhal</p>
-      <p><strong>⚔️ DPS:</strong> Capsizer</p>
-      <p><strong>⚔️ DPS:</strong> Draekhorr</p>
-    </article>
-
-  </section>
-</main>
+[
+  {
+    "rank": 1,
+    "name": "Οι μπαμπάδες",
+    "logo": "assets/images/2.webp",
+    "runs": 0,
+    "bestScore": 0,
+    "points": 0
+  },
+  {
+    "rank": 2,
+    "name": "Τα μηχανάκια",
+    "logo": "assets/images/mixanakia.png",
+    "runs": 0,
+    "bestScore": 0,
+    "points": 0
+  },
+  {
+    "rank": 3,
+    "name": "Ξιφολόγχη Army",
+    "logo": "assets/images/army.png",
+    "runs": 0,
+    "bestScore": 0,
+    "points": 0
+  },
+  {
+    "rank": 4,
+    "name": "Why Pepe",
+    "logo": "assets/images/Why_Pepe.png",
+    "runs": 0,
+    "bestScore": 0,
+    "points": 0
+  },
+  {
+    "rank": 5,
+    "name": "Τραγανός Κάβουρας",
+    "logo": "assets/images/kavouras.png",
+    "runs": 0,
+    "bestScore": 0,
+    "points": 0
+  },
+  {
+    "rank": 6,
+    "name": "Lost Crew",
+    "logo": "assets/images/lostcrew.png",
+    "runs": 0,
+    "bestScore": 0,
+    "points": 0
+  },
+  {
+    "rank": 7,
+    "name": "El Banditos",
+    "logo": "assets/images/elbanditos.png",
+    "runs": 0,
+    "bestScore": 0,
+    "points": 0
+  },
+  {
+    "rank": 8,
+    "name": "ΒΙΡΙΒΙΤΣΙ",
+    "logo": "assets/images/virivitsi.png",
+    "runs": 0,
+    "bestScore": 0,
+    "points": 0
+  }
+]
