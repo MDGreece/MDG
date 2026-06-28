@@ -90,3 +90,56 @@ async function renderLeaderboard(){
 async function renderTeams(){await boot();const teams=await getJSON('data/teams.json');$('#teamsGrid').innerHTML=teams.map(t=>`<article class="card"><span class="pill">${t.faction||''} • ${t.realm||''}</span><h2>${t.name}</h2><p class="muted">Captain: ${t.captain||'-'}</p><p>${(t.members||[]).join(' • ')}</p></article>`).join('')}
 async function renderWeekly(){await boot();const [teams,results]=await Promise.all([getJSON('data/teams.json'),getJSON('data/results.json')]);const names=Object.fromEntries(teams.map(t=>[t.id,t.name]));$('#weeks').innerHTML=results.map(w=>`<section class="card"><h2>Week ${w.week}: ${w.dungeon}</h2><p class="muted">${w.date||''} ${w.affix?'• '+w.affix:''}</p><div class="table-wrap"><table><thead><tr><th>Rank</th><th>Team</th><th>Key</th><th>Time</th><th>Points</th><th>Proof</th></tr></thead><tbody>${[...w.runs].sort((a,b)=>timeToSec(a.time)-timeToSec(b.time)).map((r,i)=>`<tr><td class="rank">#${i+1}</td><td>${names[r.teamId]||r.teamId}</td><td>+${r.keyLevel}</td><td>${r.time}</td><td>${r.points}</td><td>${r.proof&&r.proof!=='#'?`<a href="${r.proof}">Link</a>`:'-'}</td></tr>`).join('')}</tbody></table></div></section>`).join('')}
 async function renderRules(){await boot();const rules=await getJSON('data/rules.json');$('#rulesList').innerHTML=(rules[lang]||rules.en).map(r=>`<article class="card"><h2>${r.title}</h2><p class="muted">${r.body}</p></article>`).join('')}
+async function renderWeekResults(weekNumber){
+  await boot();
+
+  const results = await getJSON('data/results.json');
+  const week = results.find(w => Number(w.week) === Number(weekNumber));
+  const container = document.getElementById('weekResults');
+
+  if(!week || !container){
+    container.innerHTML = '<article class="card"><h2>No results found.</h2></article>';
+    return;
+  }
+
+  container.innerHTML = week.teams.map(team => {
+    const totalScore = team.runs.reduce((sum, run) => sum + Number(run.score || 0), 0);
+
+    return `
+      <article class="card week-team-card">
+        <div class="team-title">
+          <img src="${team.logo}" class="team-logo" alt="${team.team}">
+          <h2>${team.team}</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Dungeon</th>
+                <th>Time</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              ${team.runs.map(run => `
+                <tr>
+                  <td>${run.dungeon}</td>
+                  <td>${run.time}</td>
+                  <td>${run.score}</td>
+                </tr>
+              `).join('')}
+
+              <tr>
+                <th>TOTAL</th>
+                <th>-</th>
+                <th>${totalScore}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
