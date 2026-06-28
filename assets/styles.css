@@ -367,4 +367,7 @@ tr:hover{
 }
 .team-title h2{
     margin:0;
+   white-space:nowrap; 
+    flex:1;            
+}
 }
