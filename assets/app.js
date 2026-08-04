@@ -20,6 +20,12 @@ return `
             <a href="rules.html">📜 Rules</a>
             <a href="halloffame.html">🏅 Hall of Fame</a>
             <a href="news.html">📰 News</a>
+             <a href="https://mdgreece.github.io/Greek-Warcraft-Market/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="market-link">
+       🏪 Greek Market
+    </a>
         </div>
 
         <div class="lang">
