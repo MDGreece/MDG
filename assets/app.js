@@ -18,7 +18,7 @@ return `
             <a href="weekly.html">📅 Weekly Results</a>
             <a href="teams.html">👥 Teams</a>
             <a href="rules.html">📜 Rules</a>
-            <a href="halloffame.html">🏅 Hall of Fame</a>
+            <a href="halloffame.html">🏅 HoF</a>
             <a href="news.html">📰 News</a>
              <a href="https://mdgreece.github.io/Greek-Warcraft-Market/"
        target="_blank"
