@@ -24,7 +24,7 @@ return `
        target="_blank"
        rel="noopener noreferrer"
        class="market-link">
-       🏪 Greek Market
+       🏪 Database
     </a>
         </div>
 
