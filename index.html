@@ -38,6 +38,8 @@
     </p>
 
 
+    <!-- HERO BUTTONS -->
+
     <div class="hero-buttons">
 
       <a
@@ -56,6 +58,26 @@
       >
         📝 Δήλωσε Συμμετοχή
       </a>
+
+    </div>
+
+
+    <!-- =========================================
+         REGISTRATION COUNTDOWN
+    ========================================= -->
+
+    <div class="registration-countdown">
+
+      <div class="registration-countdown-title">
+        Οι συμμετοχές κλείνουν σε:
+      </div>
+
+      <div
+        class="registration-timer"
+        id="registrationCountdown"
+      >
+        Loading...
+      </div>
 
     </div>
 
@@ -173,30 +195,32 @@
 
 
 
-  <!-- HALL OF FAME -->
+  <!-- =========================================
+       PRIZE POOL
+  ========================================= -->
 
   <article class="card dashboard-card">
 
- <h3>
-    💰 PRIZE POOL
-  </h3>
+    <h3>
+      💰 PRIZE POOL
+    </h3>
 
-  <div class="week-number">
-    TBA
-  </div>
+    <div class="week-number">
+      TBA
+    </div>
 
-  <p class="muted">
-    Το συνολικό prize pool του MDG Season 2.
-  </p>
+    <p class="muted">
+      Το συνολικό prize pool του MDG Season 2.
+    </p>
 
-  <a
-    class="card-link"
-    href="donations.html"
-  >
-    View Top Donors →
-  </a>
+    <a
+      class="card-link"
+      href="donations.html"
+    >
+      View Top Donors →
+    </a>
 
-</article>
+  </article>
 
 
 
@@ -285,9 +309,106 @@
 
 
   /* =========================================
+     REGISTRATION COUNTDOWN
+
+     Registrations close:
+     24 October 2026
+     00:00
+
+     This means registrations remain open
+     throughout 23 October.
+  ========================================= */
+
+  function updateRegistrationCountdown(){
+
+    const countdown =
+      document.getElementById('registrationCountdown');
+
+
+    if(!countdown){
+      return;
+    }
+
+
+    const registrationDeadline =
+      new Date(2026, 9, 24, 0, 0, 0);
+
+
+    const now =
+      new Date();
+
+
+    const diff =
+      registrationDeadline - now;
+
+
+
+    /* =========================================
+       REGISTRATIONS CLOSED
+    ========================================= */
+
+    if(diff <= 0){
+
+      countdown.innerHTML = `
+        <span>ΟΙ ΣΥΜΜΕΤΟΧΕΣ ΕΧΟΥΝ ΚΛΕΙΣΕΙ</span>
+      `;
+
+      return;
+
+    }
+
+
+
+    /* =========================================
+       CALCULATE REMAINING TIME
+    ========================================= */
+
+    const totalSeconds =
+      Math.floor(diff / 1000);
+
+
+    const days =
+      Math.floor(
+        totalSeconds / 86400
+      );
+
+
+    const hours =
+      Math.floor(
+        (totalSeconds % 86400) / 3600
+      );
+
+
+    const minutes =
+      Math.floor(
+        (totalSeconds % 3600) / 60
+      );
+
+
+    const seconds =
+      totalSeconds % 60;
+
+
+
+    /* =========================================
+       DISPLAY REGISTRATION COUNTDOWN
+    ========================================= */
+
+    countdown.innerHTML = `
+      <span>${days}d</span>
+      <span>${hours}h</span>
+      <span>${minutes}m</span>
+      <span>${seconds}s</span>
+    `;
+
+  }
+
+
+
+  /* =========================================
      TOURNAMENT START COUNTDOWN
 
-     Start:
+     Tournament starts:
      Wednesday 28 October 2026
      03:00
   ========================================= */
@@ -302,15 +423,6 @@
       return;
     }
 
-
-    /*
-      JavaScript months start at 0:
-
-      January   = 0
-      February  = 1
-      ...
-      October   = 9
-    */
 
     const tournamentStart =
       new Date(2026, 9, 28, 3, 0, 0);
@@ -373,7 +485,7 @@
 
 
     /* =========================================
-       DISPLAY COUNTDOWN
+       DISPLAY TOURNAMENT COUNTDOWN
     ========================================= */
 
     countdown.innerHTML = `
@@ -387,13 +499,20 @@
 
 
 
-  /* Run immediately */
+  /* =========================================
+     START BOTH COUNTDOWNS
+  ========================================= */
 
+  updateRegistrationCountdown();
   updateWeekCountdown();
 
 
+  /* Update both every second */
 
-  /* Update every second */
+  setInterval(
+    updateRegistrationCountdown,
+    1000
+  );
 
   setInterval(
     updateWeekCountdown,
