@@ -865,3 +865,156 @@ footer{
     padding:11px;
   }
 }
+/* =========================================
+   DONATIONS / PRIZE POOL PAGE
+========================================= */
+
+.donations-header {
+  margin-bottom: 28px;
+}
+
+.donations-header h1 {
+  margin-bottom: 10px;
+}
+
+
+/* Main donations card */
+
+.donations-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+
+/* Prize pool total */
+
+.prize-pool-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.prize-pool-label {
+  color: var(--muted);
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.prize-pool-amount {
+  margin-top: 8px;
+
+  color: var(--gold);
+
+  font-size: 32px;
+  font-weight: 900;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.donations-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.donations-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 16px;
+}
+
+
+/* Table header */
+
+.donations-table thead {
+  background: rgba(85, 166, 255, 0.08);
+}
+
+.donations-table th {
+  padding: 18px 24px;
+
+  text-align: left;
+
+  color: var(--gold);
+
+  font-size: 15px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* Table rows */
+
+.donations-table td {
+  padding: 18px 24px;
+
+  color: var(--text);
+
+  border-bottom: 1px solid rgba(47, 61, 86, 0.65);
+}
+
+.donations-table tbody tr {
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.donations-table tbody tr:hover {
+  background: rgba(85, 166, 255, 0.06);
+}
+
+
+/* Donation amount */
+
+.donations-table td:last-child {
+  color: var(--gold);
+
+  font-weight: 800;
+
+  text-align: right;
+}
+
+.donations-table th:last-child {
+  text-align: right;
+}
+
+
+/* Remove line from final row */
+
+.donations-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .prize-pool-amount {
+    font-size: 27px;
+  }
+
+  .donations-table th,
+  .donations-table td {
+    padding: 15px 16px;
+  }
+
+}
