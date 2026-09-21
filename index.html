@@ -1,144 +1,376 @@
 <!doctype html>
 <html lang="el">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>MDG: Mythic Dungeon Greece</title>
+
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 
+
 <body>
 
-<main class="home-hero">
-  <div class="container hero-content">
-    <img src="assets/images/mdg-logo.png"
-     class="hero-logo"
-     alt="MDG Logo">
 
-    <h2 id="heroSubtitle">Season 2</h2>
+<!-- =========================================
+     HERO
+========================================= -->
+
+<main class="home-hero">
+
+  <div class="container hero-content">
+
+    <img
+      src="assets/images/mdg-logo.png"
+      class="hero-logo"
+      alt="MDG Logo"
+    >
+
+    <h2 id="heroSubtitle">
+      Season 2
+    </h2>
 
     <p class="hero-text">
-      To Mythic+ Τουρνουά του Ελληνικού Warcraft Community<br>
-    
+      To Mythic+ Τουρνουά του Ελληνικού Warcraft Community
+      <br>
     </p>
 
+
     <div class="hero-buttons">
-      <a class="btn gold-btn" href="leaderboard.html">🏆 Δες το Leaderboard</a>
-      <a class="btn light-blue-btn"
-   href="https://discord.gg/jjKw7cYR4B"
-   target="_blank"
-   rel="noopener noreferrer">
-   📝 Δήλωσε Συμμετοχή
-</a>
+
+      <a
+        class="btn gold-btn"
+        href="leaderboard.html"
+      >
+        🏆 Δες το Leaderboard
+      </a>
+
+
+      <a
+        class="btn light-blue-btn"
+        href="https://discord.gg/jjKw7cYR4B"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📝 Δήλωσε Συμμετοχή
+      </a>
+
     </div>
+
   </div>
+
 </main>
+
+
+
+<!-- =========================================
+     DASHBOARD
+========================================= -->
 
 <section class="container dashboard-grid">
 
+
+  <!-- LIVE LEADERBOARD -->
+
   <article class="card dashboard-card">
-    <h3>🏆 Live Leaderboard</h3>
-    <p class="muted">Δείτε την τρέχουσα κατάταξη των ομάδων για το Season 2.</p>
-    <a class="card-link" href="leaderboard.html">View full leaderboard →</a>
+
+    <h3>
+      🏆 Live Leaderboard
+    </h3>
+
+    <p class="muted">
+      Δείτε την τρέχουσα κατάταξη των ομάδων για το Season 2.
+    </p>
+
+    <a
+      class="card-link"
+      href="leaderboard.html"
+    >
+      View full leaderboard →
+    </a>
+
   </article>
+
+
+
+  <!-- =========================================
+       TOURNAMENT COUNTDOWN
+  ========================================= -->
 
   <article class="card dashboard-card current-week-card">
-    <h3>📅 Current Week</h3>
+
+    <h3>
+      📅 Tournament Starts on 28/10
+    </h3>
+
 
     <div class="week-number">
-      WEEK <span id="currentWeekNumber">1</span>
+      TIME FOR <span>WEEK 1</span>
     </div>
 
-    <div class="weekly-key">
-      WEEKLY KEY LEVEL: +12
-    </div>
 
-    <p class="muted">Week ends in:</p>
+    <p class="muted">
+      Tournament starts in:
+    </p>
 
-    <div class="countdown" id="weekCountdown">
+
+    <div
+      class="countdown"
+      id="weekCountdown"
+    >
       Loading...
     </div>
+
   </article>
 
-  <article class="card dashboard-card">
-    <h3>👥 Top Teams</h3>
-    <p class="muted">Δείτε όλες τις ομάδες, captains, realms και rosters.</p>
-    <a class="card-link" href="teams.html">View teams →</a>
-  </article>
+
+
+  <!-- TOP TEAMS -->
 
   <article class="card dashboard-card">
-    <h3>📜 Rules</h3>
-    <p class="muted">Κανόνες συμμετοχής, scoring system και submission requirements.</p>
-    <a class="card-link" href="rules.html">Read rules →</a>
+
+    <h3>
+      👥 Top Teams
+    </h3>
+
+    <p class="muted">
+      Δείτε όλες τις ομάδες, captains, realms και rosters.
+    </p>
+
+    <a
+      class="card-link"
+      href="teams.html"
+    >
+      View teams →
+    </a>
+
   </article>
 
-  <article class="card dashboard-card">
-    <h3>🏅 Hall of Fame</h3>
-    <p class="muted">Season winners, fastest runs και legendary teams.</p>
-    <a class="card-link" href="halloffame.html">View Hall of Fame →</a>
-  </article>
+
+
+  <!-- RULES -->
 
   <article class="card dashboard-card">
-    <h3>📰 News</h3>
-    <p class="muted">Ανακοινώσεις, updates και νέα για το MDG tournament.</p>
-    <a class="card-link" href="news.html">Read News →</a>
+
+    <h3>
+      📜 Rules
+    </h3>
+
+    <p class="muted">
+      Κανόνες συμμετοχής, scoring system και submission requirements.
+    </p>
+
+    <a
+      class="card-link"
+      href="rules.html"
+    >
+      Read rules →
+    </a>
+
   </article>
-  
+
+
+
+  <!-- HALL OF FAME -->
+
+  <article class="card dashboard-card">
+
+    <h3>
+      🏅 Hall of Fame
+    </h3>
+
+    <p class="muted">
+      Season winners, fastest runs και legendary teams.
+    </p>
+
+    <a
+      class="card-link"
+      href="halloffame.html"
+    >
+      View Hall of Fame →
+    </a>
+
+  </article>
+
+
+
+  <!-- NEWS -->
+
+  <article class="card dashboard-card">
+
+    <h3>
+      📰 News
+    </h3>
+
+    <p class="muted">
+      Ανακοινώσεις, updates και νέα για το MDG tournament.
+    </p>
+
+    <a
+      class="card-link"
+      href="news.html"
+    >
+      Read News →
+    </a>
+
+  </article>
+
+
 </section>
 
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer>
-  <div class="container">© 2026 MDG: Mythic Dungeon Greece</div>
+
+  <div class="container">
+    © 2026 MDG: Mythic Dungeon Greece
+  </div>
+
 </footer>
 
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
 <script src="assets/app.js"></script>
+
+
 <script>
+
+  /* =========================================
+     LOAD HOMEPAGE
+  ========================================= */
+
   renderHome();
 
-setTimeout(() => {
-  const registerButton = document.querySelector('.light-blue-btn');
-  if(registerButton){
-    registerButton.href = 'https://discord.gg/jjKw7cYR4B';
-    registerButton.target = '_blank';
-    registerButton.rel = 'noopener noreferrer';
-  }
-}, 300);
 
-  function updateWeekCountdown(){
-    const countdown = document.getElementById('weekCountdown');
-    if(!countdown) return;
 
-    const now = new Date();
-    const end = new Date(now);
+  /* =========================================
+     REGISTRATION BUTTON
+  ========================================= */
 
-    const day = now.getDay(); 
-    let daysUntilWednesday = (3 - day + 7) % 7;
+  setTimeout(() => {
 
-    const beforeWednesdayReset =
-      day === 3 &&
-      (
-        now.getHours() < 3 ||
-        (now.getHours() === 2 && now.getMinutes() <= 59)
-      );
+    const registerButton =
+      document.querySelector('.light-blue-btn');
 
-    if(daysUntilWednesday === 0 && !beforeWednesdayReset){
-      daysUntilWednesday = 7;
+
+    if(registerButton){
+
+      registerButton.href =
+        'https://discord.gg/jjKw7cYR4B';
+
+      registerButton.target =
+        '_blank';
+
+      registerButton.rel =
+        'noopener noreferrer';
+
     }
 
-    end.setDate(now.getDate() + daysUntilWednesday);
-    end.setHours(2,59,59,999);
+  }, 300);
 
-    const diff = end - now;
 
-    if(diff <= 0){
-      countdown.textContent = 'Resetting soon';
+
+  /* =========================================
+     TOURNAMENT START COUNTDOWN
+
+     Start:
+     Wednesday 28 October 2026
+     03:00
+  ========================================= */
+
+  function updateWeekCountdown(){
+
+    const countdown =
+      document.getElementById('weekCountdown');
+
+
+    if(!countdown){
       return;
     }
 
-    const totalSeconds = Math.floor(diff / 1000);
-    const days = Math.floor(totalSeconds / 86400);
-    const hours = Math.floor((totalSeconds % 86400) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
+
+    /*
+      JavaScript months start at 0:
+
+      January   = 0
+      February  = 1
+      ...
+      October   = 9
+    */
+
+    const tournamentStart =
+      new Date(2026, 9, 28, 3, 0, 0);
+
+
+    const now =
+      new Date();
+
+
+    const diff =
+      tournamentStart - now;
+
+
+
+    /* =========================================
+       TOURNAMENT HAS STARTED
+    ========================================= */
+
+    if(diff <= 0){
+
+      countdown.innerHTML = `
+        <span>WEEK 1 IS LIVE!</span>
+      `;
+
+      return;
+
+    }
+
+
+
+    /* =========================================
+       CALCULATE REMAINING TIME
+    ========================================= */
+
+    const totalSeconds =
+      Math.floor(diff / 1000);
+
+
+    const days =
+      Math.floor(
+        totalSeconds / 86400
+      );
+
+
+    const hours =
+      Math.floor(
+        (totalSeconds % 86400) / 3600
+      );
+
+
+    const minutes =
+      Math.floor(
+        (totalSeconds % 3600) / 60
+      );
+
+
+    const seconds =
+      totalSeconds % 60;
+
+
+
+    /* =========================================
+       DISPLAY COUNTDOWN
+    ========================================= */
 
     countdown.innerHTML = `
       <span>${days}d</span>
@@ -146,11 +378,28 @@ setTimeout(() => {
       <span>${minutes}m</span>
       <span>${seconds}s</span>
     `;
+
   }
 
+
+
+  /* Run immediately */
+
   updateWeekCountdown();
-  setInterval(updateWeekCountdown, 1000);
+
+
+
+  /* Update every second */
+
+  setInterval(
+    updateWeekCountdown,
+    1000
+  );
+
+
 </script>
 
+
 </body>
+
 </html>
