@@ -31,6 +31,26 @@ return `
         <div class="lang">
             <button data-lang="el">EL</button>
             <button data-lang="en">EN</button>
+            <a
+  href="https://discord.gg/v4ywTSQma9"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="nav-discord-btn"
+  title="Join our Discord"
+>
+  <svg
+    class="nav-discord-icon"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path
+      fill="currentColor"
+      d="M19.54 5.34A16.3 16.3 0 0 0 15.44 4c-.2.36-.44.84-.6 1.22a15.2 15.2 0 0 0-4.68 0A12.8 12.8 0 0 0 9.54 4a16.7 16.7 0 0 0-4.1 1.34C2.84 9.18 2.14 12.9 2.5 16.57a16.5 16.5 0 0 0 5.03 2.55c.4-.55.77-1.14 1.08-1.76a10.8 10.8 0 0 1-1.7-.82l.42-.33c3.28 1.52 6.84 1.52 10.08 0l.43.33c-.55.32-1.12.6-1.71.82.31.62.67 1.21 1.08 1.76a16.4 16.4 0 0 0 5.03-2.55c.43-4.25-.73-7.93-2.7-11.23ZM8.85 14.33c-.98 0-1.79-.91-1.79-2.03 0-1.12.79-2.03 1.79-2.03 1 0 1.81.92 1.79 2.03 0 1.12-.79 2.03-1.79 2.03Zm6.3 0c-.98 0-1.79-.91-1.79-2.03 0-1.12.79-2.03 1.79-2.03 1 0 1.81.92 1.79 2.03 0 1.12-.79 2.03-1.79 2.03Z"
+    />
+  </svg>
+
+  <span>Discord</span>
+</a>
         </div>
 
     </div>
