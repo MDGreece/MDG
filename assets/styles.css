@@ -1102,3 +1102,80 @@ footer{
   }
 
 }
+/* =========================================
+   TOP NAV DISCORD BUTTON
+========================================= */
+
+.nav-discord-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  height: 34px;
+  padding: 0 13px;
+
+  margin-left: 6px;
+
+  background: #5865F2;
+  color: #ffffff !important;
+
+  border: 1px solid #7289da;
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none !important;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Discord logo */
+
+.nav-discord-icon {
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+}
+
+
+/* Hover */
+
+.nav-discord-btn:hover {
+  background: #4752c4;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 12px rgba(88, 101, 242, 0.35);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .nav-discord-btn {
+    padding: 0 9px;
+  }
+
+  .nav-discord-btn span {
+    display: none;
+  }
+
+  .nav-discord-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+}
