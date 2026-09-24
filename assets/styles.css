@@ -1179,3 +1179,29 @@ footer{
   }
 
 }
+/* =========================================
+   WIDER TOP NAVIGATION
+========================================= */
+
+.nav .container {
+  width: calc(100% - 40px);
+  max-width: none;
+}
+
+.nav-inner {
+  gap: 14px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
